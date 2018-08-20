@@ -1,0 +1,98 @@
+{
+  "name": "electron-vue",
+  "description": "Electron Vue mixed boilerplate",
+  "version": "0.0.1",
+  "author": "Practice Golang <practice.golang@gmail.com>",
+  "license": "CC0-1.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "npm run build:vue & electron .",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
+    "build:vue": "cross-env NODE_ENV=production webpack --progress --hide-modules",
+    "build:osx": "build --mac",
+    "build:linux": "npm run build:linux32 && npm run build:linux64",
+    "build:linux32": "build --linux --ia32",
+    "build:linux64": "build --linux --x64",
+    "build:win": "npm run build:win32 && npm run build:win64",
+    "build:win32": "build --win --ia32",
+    "build:win64": "npm run build:vue & build --win --x64"
+  },
+  "build": {
+    "productName": "ElectronVue",
+    "appId": "com.electron.vue",
+    "asar": true,
+    "protocols": {
+      "name": "electronVue",
+      "schemes": [
+        "electronVue"
+      ]
+    },
+    "mac": {
+      "target": [
+        "default"
+      ],
+      "icon": "./resources/installer/icon.icns"
+    },
+    "dmg": {
+      "title": "electronVue",
+      "icon": "./resources/installer/icon.icns"
+    },
+    "win": {
+      "target": [
+        "zip",
+        "nsis"
+      ],
+      "icon": "./resources/icon.ico"
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb",
+        "rpm",
+        "zip",
+        "tar.gz"
+      ],
+      "icon": "./resources/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    },
+    "directories": {
+      "buildResources": "resources/installer/",
+      "output": "electron-dist",
+      "app": "."
+    }
+  },
+  "repository": "https://github.com/practice-golang/electron-vue",
+  "keywords": [
+    "Electron",
+    "Vue"
+  ],
+  "dependencies": {
+    "vue": "^2.5.17",
+    "vue-router": "^3.0.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-3": "^6.24.1",
+    "cross-env": "^5.2.0",
+    "css-loader": "^1.0.0",
+    "electron": "^2.0.7",
+    "electron-builder": "^20.27.1",
+    "file-loader": "^1.1.11",
+    "node-sass": "^4.9.3",
+    "sass-loader": "^7.1.0",
+    "vue-loader": "^13.0.5",
+    "vue-template-compiler": "^2.5.17",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.9.1"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}
