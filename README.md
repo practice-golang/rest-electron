@@ -1,4 +1,4 @@
-# 간단한 Go(ql), Vue(+Electron) Rest-Client
+# 간단한 Go([ql](https://github.com/cznic/ql)), Vue(+Electron) Rest-Client
 CRUD 연습용  
 기존 [rest-client](https://github.com/practice-golang/rest-client)에 일렉트론을 붙여 봄  
 [rest-ql-crud](https://github.com/practice-golang/rest-ql-crud)에서 컴파일한 실행파일 필요함  
