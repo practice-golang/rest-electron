@@ -27,6 +27,9 @@ function loadScript(url) {
 if (isElectron()) {
     const {app} = require('electron').remote;
     process.env.ELECTRONVUESITE = app.getAppPath()
+    console.log(process.env.ELECTRONVUESITE)
+    process.env.ELECTRONVUESITE = process.env.ELECTRONVUESITE.replace("\\app.asar", "")
+    console.log(process.env.ELECTRONVUESITE)
 
     var child = require('child_process').execFile;
     var executablePath = __dirname + '/dist/server.exe';
