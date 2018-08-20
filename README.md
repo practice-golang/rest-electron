@@ -4,7 +4,7 @@ CRUD 연습용
 [rest-ql-crud](https://github.com/practice-golang/rest-ql-crud)에서 컴파일한 실행파일 필요함
 
 ## Requirement
-* [rest-ql-crud]()
+* [rest-ql-crud](https://github.com/practice-golang/rest-ql-crud)
 * 소스말고 소스에서 컴파일 한 실행파일이 필요
 
 ## Build, Run
