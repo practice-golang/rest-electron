@@ -1,11 +1,7 @@
-# 간단한 Go(ql)), Vue(+Electron) Rest-Client
+# 간단한 Go(ql), Vue(+Electron) Rest-Client
 CRUD 연습용  
-기존 [rest-client](https://github.com/practice-golang/rest-client)에 일렉트론을 붙여 봄
-[rest-ql-crud](https://github.com/practice-golang/rest-ql-crud)에서 컴파일한 실행파일 필요함
-
-## Requirement
-* [rest-ql-crud](https://github.com/practice-golang/rest-ql-crud)
-* 소스말고 소스에서 컴파일 한 실행파일이 필요
+기존 [rest-client](https://github.com/practice-golang/rest-client)에 일렉트론을 붙여 봄  
+[rest-ql-crud](https://github.com/practice-golang/rest-ql-crud)에서 컴파일한 실행파일 필요함  
 
 ## Build, Run
 ```powershell
@@ -33,6 +29,3 @@ npm run build:linux
 # 매킨토시 빌드 - 아직 안 됨
 npm run build:osx
 ```
-
-## License
-[CC0 1.0 (Public Domain)](LICENSE.md)
