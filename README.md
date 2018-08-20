@@ -3,7 +3,7 @@ CRUD 연습용
 기존 [rest-client](https://github.com/practice-golang/rest-client)에 일렉트론을 붙여 봄  
 [rest-ql-crud](https://github.com/practice-golang/rest-ql-crud)에서 컴파일한 실행파일 필요함  
 
-[빌드 샘플](https://www.dropbox.com/s/qxi5hwji6o1h76b/ElectronVue-0.0.1-win.zip?dl=1)  
+[Demo](https://www.dropbox.com/s/qxi5hwji6o1h76b/ElectronVue-0.0.1-win.zip?dl=1)  
 
 ## Build, Run
 ```powershell
