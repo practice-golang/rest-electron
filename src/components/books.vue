@@ -2,7 +2,7 @@
   <div>
     <div id="book-data">
       <input type="hidden" name="id" ref="id" placeholder=0>
-      <span>제목/작가:</span>
+      <span>Title / Author:</span>
       <input name="Title" ref="Title_new" placeholder="">
       <input name="Author" ref="Author_new" placeholder="">
       <button @click="createUpdateItem" id="btn-insert-update">Insert/Change Data</button>
@@ -15,7 +15,7 @@
       <span v-html="data_loading"></span>
       <table border=1>
         <tr>
-          <th colspan="6">목록</th>
+          <th colspan="6">Book List</th>
         </tr>
         <tr v-for="(items, i) in book_data" :key=i>
           <template v-if="edit === items.ID">
@@ -29,10 +29,10 @@
               <input v-model="items.Author" name="author" ref="author">
             </td>
             <td>
-              <button @click="createUpdateItem(items)" id="update_book_data">수정</button>
+              <button @click="createUpdateItem(items)" id="update_book_data">Apply</button>
             </td>
             <td>
-              <button @click="cancelEdit(items)" id="cancel_edit">취소</button>
+              <button @click="cancelEdit(items)" id="cancel_edit">Cancel</button>
             </td>
           </template>
           <template v-else>
@@ -40,10 +40,10 @@
             <td>{{items.Title}}</td>
             <td>{{items.Author}}</td>
             <td>
-              <button @click="editItem(items)" id="edit_book_data">편집</button>
+              <button @click="editItem(items)" id="edit_book_data">Edit</button>
             </td>
             <td>
-              <button @click="deleteItem(items.ID)" id="delete_book_data">삭제</button>
+              <button @click="deleteItem(items.ID)" id="delete_book_data">Delete</button>
             </td>
           </template>
         </tr>

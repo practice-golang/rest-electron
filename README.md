@@ -10,9 +10,6 @@ Need binary as dist/server.exe from [rest-ql-crud](https://github.com/practice-g
 # Prepare js dependancies
 npm install
 
-# Run dev server for browser, not electron
-npm run dev
-
 # Build only vue.js source, not electron
 npm run build:vue
 
