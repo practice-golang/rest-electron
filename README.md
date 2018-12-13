@@ -1,4 +1,4 @@
-# 간단한 Go([ql](https://github.com/cznic/ql)), Vue(+Electron) Rest-Client
+# Simple Rest-Client using Go([ql](https://github.com/cznic/ql)), Vue(+Electron)
 For CRUD Practice  
 Put [rest-client](https://github.com/practice-golang/rest-client) in Electron  
 Need binary as dist/server.exe from [rest-ql-crud](https://github.com/practice-golang/rest-ql-crud)  
