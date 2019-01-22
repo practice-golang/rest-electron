@@ -1,23 +1,23 @@
 <template>
   <div>
     <div id="book-data">
-      <input type="hidden" name="id" ref="id" placeholder=0>
+      <input type="hidden" name="id" ref="id" placeholder="0">
       <span>Title / Author:</span>
-      <input name="Title" ref="Title_new" placeholder="">
-      <input name="Author" ref="Author_new" placeholder="">
+      <input name="Title" ref="Title_new" placeholder>
+      <input name="Author" ref="Author_new" placeholder>
       <button @click="createUpdateItem" id="btn-insert-update">Insert/Change Data</button>
       <p></p>
 
       <button @click="getList(null)" id="call_book_data">Get book list</button>
-
-      <img :class="isLoading ? 'show' : 'hide'" src='../assets/loading.gif'>
-
+      
+      <img :class="isLoading ? 'show' : 'hide'" src="../assets/loading.gif">
+      
       <span v-html="data_loading"></span>
-      <table border=1>
+      <table border="1">
         <tr>
           <th colspan="6">Book List</th>
         </tr>
-        <tr v-for="(items, i) in book_data" :key=i>
+        <tr v-for="(items, i) in book_data" :key="i">
           <template v-if="edit === items.ID">
             <td>
               <input v-model="items.ID" type="disabled" name="id" ref="id">
@@ -55,48 +55,48 @@
 <script>
 export default {
   name: "book-data",
-  data: function() {
+  data: function () {
     return {
       isLoading: false,
       rest_url: "http://localhost:1323",
       data_loading: "",
       book_data: [],
       edit: 0
-    };
+    }
   },
   mounted() {
-    this.isLoading = false;
+    this.isLoading = false
   },
   methods: {
-    getList: function() {
-      var vm = this;
-      var xhr = new XMLHttpRequest();
+    getList: function () {
+      var vm = this
+      var xhr = new XMLHttpRequest()
 
-      this.isLoading = true;
+      this.isLoading = true
 
-      xhr.onreadystatechange = function() {
+      xhr.onreadystatechange = function () {
         xhr.readyState > 3 && xhr.status == 200
           ? (vm.book_data = JSON.parse(xhr.responseText))
-          : null;
-      };
+          : null
+      }
 
-      this.isLoading = false;
+      this.isLoading = false
 
-      xhr.open("GET", this.rest_url + "/books", true);
-      xhr.send();
+      xhr.open("GET", this.rest_url + "/books", true)
+      xhr.send()
     },
-    createUpdateItem: function(item) {
-      var vm = this;
-      var xhr = new XMLHttpRequest();
+    createUpdateItem: function (item) {
+      var vm = this
+      var xhr = new XMLHttpRequest()
 
-      var mode = "";
-      var params = "";
+      var mode = ""
+      var params = ""
 
       if (item.ID != undefined) {
         vm.$data.edit = 0;
         params = "ID=" + item.ID + "&Title=" + item.Title + "&Author=" + item.Author;
         mode = "PUT";
-        console.log(params);
+        // console.log(params);
       } else {
         params =
           "Title=" +
@@ -106,13 +106,13 @@ export default {
         mode = "POST";
       }
 
-      this.isLoading = true;
+      this.isLoading = true
 
-      xhr.onreadystatechange = function() {
+      xhr.onreadystatechange = function () {
         xhr.readyState > 3 && xhr.status == 200
           ? ((vm.data_loading = ""), alert(xhr.responseText), vm.getList())
-          : null;
-      };
+          : null
+      }
 
       this.isLoading = false;
 
@@ -120,32 +120,33 @@ export default {
       xhr.setRequestHeader(
         "Content-Type",
         "application/x-www-form-urlencoded; charset=UTF-8"
-      );
+      )
       xhr.send(params);
     },
-    editItem: function(book) {
+    editItem: function (book) {
       this.$data.edit = book.ID;
     },
-    cancelEdit: function(book) {
-      this.$data.edit = 0;
+    cancelEdit: function (book) {
+      this.$data.edit = 0
+      console.log(book)
     },
-    deleteItem: function(book_id) {
-      console.log(book_id);
-      var vm = this;
+    deleteItem: function (book_id) {
+      // console.log(book_id);
+      var vm = this
       var xhr = new XMLHttpRequest();
 
       // this.data_loading = "<img src='../assets/loading.gif' height=21>";
-      xhr.onreadystatechange = function() {
+      xhr.onreadystatechange = function () {
         xhr.readyState > 3 && xhr.status == 200
           ? ((vm.data_loading = ""), alert(xhr.responseText), vm.getList())
-          : null;
-      };
+          : null
+      }
 
-      xhr.open("DELETE", this.rest_url + "/books/" + book_id, true);
-      xhr.send();
+      xhr.open("DELETE", this.rest_url + "/books/" + book_id, true)
+      xhr.send()
     }
   }
-};
+}
 </script>
 
 <style>

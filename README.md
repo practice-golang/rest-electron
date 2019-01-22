@@ -1,30 +1,54 @@
 # Simple CRUD app using Go([ql](https://github.com/cznic/ql)), Vue(+Electron)
 For CRUD Practice  
 Put [rest-client](https://github.com/practice-golang/rest-client) in Electron  
-Need binary as dist/server.exe from [rest-ql-crud](https://github.com/practice-golang/rest-ql-crud)  
+Need binary as dist/server.exe which from public/server.exe at [rest-ql-crud](https://github.com/practice-golang/rest-ql-crud)  
 
 [Demo](https://www.dropbox.com/s/qxi5hwji6o1h76b/ElectronVue-0.0.1-win.zip?dl=1)  
 
-## Build, Run
+## Build, Run except Electron
+### Prepare js dependancies
 ```powershell
-# Prepare js dependancies
 npm install
+```
 
-# Build only vue.js source, not electron
+### Run Vue.js dev server for web browser
+```powershell
+./public/server.exe
+npm run vue
+```
+
+### Build only Vue.js source, not electron
+```powershell
 npm run build:vue
+```
 
-# Below are build for electron
-# REST server - dist/server.exe which compiled from rest-ql-crud should be placed
+## Build for Electron
+### REST server
+```powershell
+`./public/server.exe`
+```
 
-# Build vue.js and run electron
-npm run start
+### Build vue.js and run electron
+```powershell
+npm run electron
+```
 
-# Build for Windows x64
+### Build for Windows x64
+```powershell
 npm run build:win64
+```
 
-# Build for Linux - Not yet
+### Build for Linux - Not yet
+```powershell
 npm run build:linux
+```
 
-# Build for Mac - Not yet
+### Build for Mac - Not yet
+```powershell
 npm run build:osx
 ```
+
+## ql.db
+* project_root/ql.db : Using for `Run Vue.js dev server for web browser`
+* dist/ql.db : Using for else
+* electron-dist/resources/ql.db : It will be created when insert a new data after `build`
