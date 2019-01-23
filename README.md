@@ -13,7 +13,7 @@ npm install
 
 ### Run Vue.js dev server for web browser
 ```powershell
-./public/server.exe
+./server_prepare/server.exe
 npm run vue
 ```
 
@@ -22,20 +22,24 @@ npm run vue
 npm run build:vue
 ```
 
-## Build for Electron
-### REST server
-```powershell
-`./public/server.exe`
-```
+## Build or run for Electron
+* Considered MS-Windows only. If you use other OS, you should edit `slash` of copy command in `package.json`
 
 ### Build vue.js and run electron
 ```powershell
 npm run electron
 ```
 
-### Build for Windows x64
+### Build for 32bit OS
+```sh
+Never
+```
+
+### Build for Windows
+* When build, `dist` folder will be created
+* `server.exe` will be copied to `dist` folder
 ```powershell
-npm run build:win64
+npm run build:win
 ```
 
 ### Build for Linux - Not yet
@@ -50,5 +54,6 @@ npm run build:osx
 
 ## ql.db
 * project_root/ql.db : Using for `Run Vue.js dev server for web browser`
-* dist/ql.db : Using for else
-* electron-dist/resources/ql.db : It will be created when insert a new data after `build`
+* `ql.db` location: `built_app_path/resources`
+    * When you insert first data, this file will be created to above folder
+    * If you want to include `ql.db` which is already created to the binary, copy it to above folder yourself

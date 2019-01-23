@@ -25,14 +25,21 @@ function loadScript(url) {
 }
 
 if (isElectron()) {
-    const {app} = require('electron').remote;
+    const { app } = require('electron').remote;
     process.env.ELECTRONVUESITE = app.getAppPath()
-    console.log(process.env.ELECTRONVUESITE)
+    // console.log(process.env.ELECTRONVUESITE)
     process.env.ELECTRONVUESITE = process.env.ELECTRONVUESITE.replace("\\app.asar", "")
-    console.log(process.env.ELECTRONVUESITE)
+    // console.log(process.env.ELECTRONVUESITE)
 
     var child = require('child_process').execFile;
-    var executablePath = __dirname + '/server.exe';
+    let executablePath = "";
+    if (process.platform === "win32") {
+        executablePath = __dirname + '/server.exe';
+    } else if (process.platform === "linux") {
+        executablePath = __dirname + '/server';
+    } else if (process.platform === "darwin") {
+        executablePath = __dirname + '/servermacos';
+    }
 
     child(executablePath, (err, data) => {
         if (err) {

@@ -32,7 +32,7 @@
               <button @click="createUpdateItem(items)" id="update_book_data">Apply</button>
             </td>
             <td>
-              <button @click="cancelEdit(items)" id="cancel_edit">Cancel</button>
+              <button @click="cancelEdit()" id="cancel_edit">Cancel</button>
             </td>
           </template>
           <template v-else>
@@ -126,12 +126,10 @@ export default {
     editItem: function (book) {
       this.$data.edit = book.ID;
     },
-    cancelEdit: function (book) {
+    cancelEdit: function () {
       this.$data.edit = 0
-      console.log(book)
     },
     deleteItem: function (book_id) {
-      // console.log(book_id);
       var vm = this
       var xhr = new XMLHttpRequest();
 
