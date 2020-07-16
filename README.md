@@ -23,7 +23,7 @@ npm run build:vue
 
 ## Build or run for Electron
 
-* For linux, macos : Never. Try, try!! Good luck!! ^-^;
+* For linux, macos : I will never do them. Try, try!! Good luck!! ^-^;
 
 ### Build vue.js and run electron
 ```powershell
