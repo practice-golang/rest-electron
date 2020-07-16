@@ -37,7 +37,7 @@ Never
 
 ### Build for Windows
 * When build, `dist` folder will be created
-* `server.exe` will be copied to `dist` folder
+* `server.exe` will be copied to `dist` folder and will be included in `app.asar` file
 ```powershell
 npm run build:win
 ```
