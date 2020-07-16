@@ -22,7 +22,8 @@ npm run build:vue
 ```
 
 ## Build or run for Electron
-* Considered MS-Windows only. If you use other OS, you should edit `slash` of copy command in `package.json`
+
+* For linux, macos : Never. Try, try!! Good luck!! ^-^;
 
 ### Build vue.js and run electron
 ```powershell
@@ -36,20 +37,10 @@ npm run electron
 npm run build:win
 ```
 
-### Build for Linux - Never, sorry ^-^;
-```powershell
-npm run build:linux
-```
-
-### Build for Mac - Never, sorry ^-^;
-```powershell
-npm run build:osx
-```
-
 ## ql.db
 * project_root/ql.db : Using for `Run Vue.js dev server for web browser`
 * `ql.db` location: `built_app_path/resources` - See `package.json`
     * ~~When you insert first data, this file will be created to above folder~~
 
-----
+--
 LICENSE : Public domain.
