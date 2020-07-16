@@ -1,0 +1,34 @@
+### Not work
+GET http://localhost:1323
+
+### Index
+GET http://localhost:1323/books
+
+### Create
+POST http://localhost:1323/books
+Content-Type: application/x-www-form-urlencoded
+
+Title=책 제목
+&Author=작가 이름
+
+### Read
+GET http://localhost:1323/books/1
+
+### Update
+PUT http://localhost:1323/books
+content-type: application/json
+
+{
+    "ID": 2,
+    "Title": "Dark Knight",
+    "Author": "Bruce Wayne Vane"
+}
+
+### Delete - token not yet use & work
+DELETE http://localhost:1323/books/5
+content-type: application/json
+
+{
+    "user": "ㅋㄷ",
+    "token": "버스토큰 택시토큰 지하철토큰 뱅기 토큰"
+}

@@ -10,9 +10,9 @@
     "vue": "vue-cli-service serve",
     "lint": "vue-cli-service lint",
     "build:vue": "vue-cli-service build",
-    "build:osx": "npm run build:vue & copy ./server_prepare/servermacos ./dist & build --mac",
-    "build:linux": "npm run build:vue & copy ./server_prepare/server ./dist & build --linux --x64",
-    "build:win": "npm run build:vue & copy .\\server_prepare\\server.exe .\\dist & build --win --x64"
+    "build:osx": "npm run build:vue & copy ./server_prepare/servermacos ./dist & electron-builder --mac",
+    "build:linux": "npm run build:vue & copy ./server_prepare/server ./dist & electron-builder --linux portable --x64",
+    "build:win": "npm run build:vue & copy .\\server_prepare\\server.exe .\\dist & electron-builder --win portable --x64"
   },
   "build": {
     "productName": "ElectronVue",
@@ -24,6 +24,9 @@
         "electronVue"
       ]
     },
+    "extraResources": [
+      "./ql.db"
+    ],
     "mac": {
       "target": [
         "default"
@@ -67,21 +70,21 @@
     "Vue"
   ],
   "dependencies": {
-    "vue": "^2.5.21",
-    "vue-router": "^3.0.2"
+    "vue": "^2.6.11",
+    "vue-router": "^3.3.4"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.3.0",
-    "@vue/cli-plugin-eslint": "^3.3.0",
-    "@vue/cli-service": "^3.3.0",
-    "babel-eslint": "^10.0.1",
-    "eslint": "^5.8.0",
-    "eslint-plugin-vue": "^5.0.0",
-    "electron": "^4.0.1",
-    "electron-builder": "^20.38.5",
-    "node-sass": "^4.11.0",
-    "sass-loader": "^7.1.0",
-    "vue-template-compiler": "^2.5.21"
+    "@vue/cli-plugin-babel": "^4.4.6",
+    "@vue/cli-plugin-eslint": "^4.4.6",
+    "@vue/cli-service": "^4.4.6",
+    "babel-eslint": "^10.1.0",
+    "electron": "^9.1.0",
+    "electron-builder": "^22.7.0",
+    "eslint": "^7.4.0",
+    "eslint-plugin-vue": "^6.2.2",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^9.0.2",
+    "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {
     "root": true,

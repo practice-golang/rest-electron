@@ -1,7 +1,7 @@
 # Simple CRUD app using Go([ql](https://github.com/cznic/ql)), Vue(+Electron)
 For CRUD Practice  
 Put [rest-client](https://github.com/practice-golang/rest-client) in Electron  
-Need binary as dist/server.exe which from public/server.exe at [rest-ql-crud](https://github.com/practice-golang/rest-ql-crud)  
+Need binary at dist/server.exe which should copy from public/server.exe at [rest-ql-crud](https://github.com/practice-golang/rest-ql-crud)  
 
 [Demo](https://www.dropbox.com/s/qxi5hwji6o1h76b/ElectronVue-0.0.1-win.zip?dl=1)  
 
