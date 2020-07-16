@@ -42,5 +42,5 @@ npm run build:win
 * `ql.db` location: `built_app_path/resources` - See `package.json`
     * ~~When you insert first data, this file will be created to above folder~~
 
---
+----
 LICENSE : Public domain.
