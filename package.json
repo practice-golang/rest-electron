@@ -11,8 +11,8 @@
     "lint": "vue-cli-service lint",
     "build:vue": "vue-cli-service build",
     "build:osx": "npm run build:vue & copy ./server_prepare/servermacos ./dist & electron-builder --mac",
-    "build:linux": "npm run build:vue & copy ./server_prepare/server ./dist & electron-builder --linux portable --x64",
-    "build:win": "npm run build:vue & copy .\\server_prepare\\server.exe .\\dist & electron-builder --win portable --x64"
+    "build:linux": "npm run build:vue & copy ./server_prepare/server ./dist & electron-builder --linux --x64",
+    "build:win": "npm run build:vue & copy .\\server_prepare\\server.exe .\\dist & electron-builder --win --x64"
   },
   "build": {
     "productName": "ElectronVue",

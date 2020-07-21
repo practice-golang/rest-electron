@@ -12,13 +12,15 @@ npm install
 
 ### Run Vue.js dev server for web browser
 ```powershell
-./server_prepare/server.exe
-npm run vue
+$ ./server_prepare/server.exe
+
+# Run on another console
+$ npm run vue
 ```
 
 ### Build only Vue.js source, not electron
 ```powershell
-npm run build:vue
+$ npm run build:vue
 ```
 
 ## Build or run for Electron
@@ -27,20 +29,21 @@ npm run build:vue
 
 ### Build vue.js and run electron
 ```powershell
-npm run electron
+$ npm run electron
 ```
 
 ### Build for Windows
 * When build, `dist` folder will be created
 * `server.exe` will be copied to `dist` folder and will be included in `app.asar` file
 ```powershell
-npm run build:win
+$ npm run build:win
 ```
 
 ## ql.db
-* project_root/ql.db : Using for `Run Vue.js dev server for web browser`
-* `ql.db` location: `built_app_path/resources` - See `package.json`
-    * ~~When you insert first data, this file will be created to above folder~~
+* project_root/ql.db : `Run Vue.js dev server for web browser` use this.
+* Path for electron dist : `built_app_path/resources` - See `package.json`
+    * When you insert first data, this file will be created to the path.
+    * Not work with `portable` (eg. `electron-builder --win portable --x64`) option of electron-builder.
 
 ----
 LICENSE : Public domain.
