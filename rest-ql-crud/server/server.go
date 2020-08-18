@@ -90,7 +90,7 @@ func main() {
 
 	dbbooks.CreateTable("books", dbname)
 
-	e.Logger.Fatal(e.Start("127.0.0.1:1323")) // Electron에 붙일 때 방화벽 경고가 안 뜬다.
-	// e.Logger.Fatal(e.Start(":1323")) // 0.0.0.0 은 Electron spawn시 방화벽 경고가 뜬다.
+	e.Logger.Fatal(e.Start("127.0.0.1:13230")) // Electron에 붙일 때 방화벽 경고가 안 뜬다.
+	// e.Logger.Fatal(e.Start(":13230")) // 0.0.0.0 은 Electron spawn시 방화벽 경고가 뜬다.
 	// e.Logger.Fatal(e.Start(":80")) // 80포트 사용 가능. 안되면 다른 웹서버가 돌고 있는지 확인한다.
 }

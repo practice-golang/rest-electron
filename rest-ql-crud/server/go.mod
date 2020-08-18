@@ -1,5 +1,7 @@
 module server
 
+go 1.14
+
 require (
 	dbbooks v0.0.0
 	github.com/davecgh/go-spew v1.1.1 // indirect
@@ -12,8 +14,7 @@ require (
 	github.com/stretchr/testify v1.2.2 // indirect
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
 	github.com/valyala/fasttemplate v0.0.0-20170224212429-dcecefd839c4 // indirect
-	golang.org/x/crypto v0.0.0-20181001203147-e3636079e1a4 // indirect
-	golang.org/x/sys v0.0.0-20181004145325-8469e314837c // indirect
+	modernc.org/ql v1.1.0 // indirect
 )
 
 replace dbbooks => ../dbbooks

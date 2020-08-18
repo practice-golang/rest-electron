@@ -1,21 +1,23 @@
+@uri = http://localhost:13230
+
 ### Not work
-GET http://localhost:1323
+GET {{uri}}
 
 ### Index
-GET http://localhost:1323/books
+GET {{uri}}/books
 
 ### Create
-POST http://localhost:1323/books
+POST {{uri}}/books
 Content-Type: application/x-www-form-urlencoded
 
 Title=책 제목
 &Author=작가 이름
 
 ### Read
-GET http://localhost:1323/books/1
+GET {{uri}}/books/1
 
 ### Update
-PUT http://localhost:1323/books
+PUT {{uri}}/books
 content-type: application/json
 
 {
@@ -25,7 +27,7 @@ content-type: application/json
 }
 
 ### Delete - token not yet use & work
-DELETE http://localhost:1323/books/5
+DELETE {{uri}}/books/5
 content-type: application/json
 
 {

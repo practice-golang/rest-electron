@@ -58,7 +58,7 @@ export default {
   data: function () {
     return {
       isLoading: false,
-      rest_url: "http://localhost:1323",
+      rest_url: "http://localhost:13230",
       data_loading: "",
       book_data: [],
       edit: 0

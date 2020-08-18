@@ -4,7 +4,9 @@ import (
 	"math/big"
 	"strconv"
 
-	"github.com/cznic/ql"
+	// "github.com/cznic/ql"
+
+	"modernc.org/ql"
 )
 
 // Book : 책 정보
