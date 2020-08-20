@@ -2,7 +2,7 @@
 
 Used [rest-client](https://github.com/practice-golang/rest-client), [rest-ql-crud](https://github.com/practice-golang/rest-ql-crud)
 
-[Demo](https://www.dropbox.com/s/qxi5hwji6o1h76b/ElectronVue-0.0.1-win.zip?dl=1)  
+[Demo](https://www.dropbox.com/s/7o9cv2zfnobrvkm/ElectronVue-0.0.2-win.zip?dl=1)  
 
 ## Build, Run except Electron
 ### Prepare js dependancies
