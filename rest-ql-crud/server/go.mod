@@ -14,7 +14,6 @@ require (
 	github.com/stretchr/testify v1.2.2 // indirect
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
 	github.com/valyala/fasttemplate v0.0.0-20170224212429-dcecefd839c4 // indirect
-	modernc.org/ql v1.1.0 // indirect
 )
 
 replace dbbooks => ../dbbooks
