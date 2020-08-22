@@ -1,4 +1,4 @@
-# App practice & study using Go([ql](https://github.com/cznic/ql)) & Vue(+Electron)
+# Practice for Go([ql](https://github.com/cznic/ql)) & Vue(+Electron)
 
 Used [rest-client](https://github.com/practice-golang/rest-client), [rest-ql-crud](https://github.com/practice-golang/rest-ql-crud)
 
@@ -24,7 +24,6 @@ $ npm run build:vue
 ```
 
 ## Build or run for Electron
-
 * For linux, macos : I will never do them. Try, try!! Good luck!! ^-^
 
 ### Build vue.js and run electron
