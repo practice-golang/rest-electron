@@ -70,21 +70,21 @@
     "Vue"
   ],
   "dependencies": {
-    "vue": "^2.6.11",
-    "vue-router": "^3.4.3"
+    "vue": "^2.6.12",
+    "vue-router": "^3.5.1"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.5.4",
-    "@vue/cli-plugin-eslint": "^4.5.4",
-    "@vue/cli-service": "^4.5.4",
+    "@vue/cli-plugin-babel": "^4.5.12",
+    "@vue/cli-plugin-eslint": "^4.5.12",
+    "@vue/cli-service": "^4.5.12",
     "babel-eslint": "^10.1.0",
-    "electron": "^9.4.0",
-    "electron-builder": "^22.8.0",
-    "eslint": "^7.7.0",
-    "eslint-plugin-vue": "^6.2.2",
-    "node-sass": "^4.14.1",
-    "sass-loader": "^9.0.3",
-    "vue-template-compiler": "^2.6.11"
+    "electron": "^12.0.1",
+    "electron-builder": "^22.10.5",
+    "eslint": "^7.22.0",
+    "eslint-plugin-vue": "^7.7.0",
+    "node-sass": "^5.0.0",
+    "sass-loader": "^11.0.1",
+    "vue-template-compiler": "^2.6.12"
   },
   "eslintConfig": {
     "root": true,
